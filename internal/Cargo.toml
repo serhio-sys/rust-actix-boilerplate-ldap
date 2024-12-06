@@ -1,0 +1,44 @@
+[package]
+name = "internal"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "internal"
+path = "internal.rs"
+
+[dependencies]
+config = { path = "../config" }
+
+# Database libs 
+diesel = { version = "2.2.0", features = ["postgres", "chrono", "uuid", "r2d2"] }
+diesel_migrations = { version = "2.2.0" }
+chrono = { version = "0.4.38", features = ["serde"] }
+uuid = { version = "1.2", features = ["v4", "serde"] }
+
+# Validation and serialization
+validator = { version = "0.18.1", features = ["derive"] }
+futures = "0.3"
+mime = "0.3"
+serde_qs = { version = "0.13", features = ["actix4"] }
+serde_urlencoded = "0.7"
+serde = { version = "1.0", features = ["derive", "rc"] }
+serde_json = "1.0"
+
+
+# Ldap
+ldap3 = "0.11.5"
+
+# Hashing
+pwhash = "1"
+
+rand = "0.8" 
+async-trait = "0.1.83"
+thiserror = "1.0"
+tokio = "1.41.1"
+
+# Actix
+actix-web = "4"
+actix-cors = "0.7.0"
+actix-files = "0.6"
+jsonwebtoken = { version = "8.1" }

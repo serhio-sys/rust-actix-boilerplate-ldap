@@ -1,0 +1,13 @@
+[package]
+name = "rust-actix-boilerplaite-ldap"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server"
+path = "cmd/server/main.rs"
+
+[dependencies]
+config = { path = "config" }
+internal = { path = "internal" }
+actix-web = "4"
