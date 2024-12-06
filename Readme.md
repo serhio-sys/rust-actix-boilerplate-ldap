@@ -32,8 +32,8 @@ To run the application locally without Docker, follow these steps:
     - Create a new database for the application.
 - Rename the environment file .env.example -> .env.
     - Edit the .env file and update the environment variables with your PostgreSQL configuration.
-    - **Attantion** `LDAP_URL` the ldap url variable is required. Example value: `ldap://localhost:1389`
-    - **Attantion** `LDAP_AUTH_BASE_DN` this variable represents the path to the users directory. Example value: `"ou=users,ou=rust-server,dc=example,dc=organization"`
+    - **Attention** `LDAP_URL` the ldap url variable is required. Example value: `ldap://localhost:1389`
+    - **Attention** `LDAP_AUTH_BASE_DN` this variable represents the path to the users directory. Example value: `"ou=users,ou=rust-server,dc=example,dc=organization"`
 - Then just simply use command: `cargo run --package rust-actix-boilerplaite --bin server`. (Assuming the Cargo.toml configuration has not been modified).
 
 ### Getting Started (Docker Version)
@@ -43,8 +43,8 @@ To run the application locally without Docker, follow these steps:
     - Rename .docker/.app.env.example to .docker/.app.env.
     - Rename .docker/.db.env.example to .docker/.db.env.
     - Edit these .env files to configure the application and PostgreSQL database credentials.
-    - **Attantion** `LDAP_URL` the ldap url variable is required. Example value: `ldap://localhost:1389`
-    - **Attantion** `LDAP_AUTH_BASE_DN` this variable represents the path to the users directory. Example value: `"ou=users,ou=rust-server,dc=example,dc=organization"`
+    - **Attention** `LDAP_URL` the ldap url variable is required. Example value: `ldap://localhost:1389`
+    - **Attention** `LDAP_AUTH_BASE_DN` this variable represents the path to the users directory. Example value: `"ou=users,ou=rust-server,dc=example,dc=organization"`
 - Run Docker Compose
     - Navigate to the .docker directory: `cd .docker`
     - Run the application using Docker Compose: `docker compose up` | `docker-compose up` Or to run it in detached mode: `docker compose up -d` | `docker-compose up -d`
